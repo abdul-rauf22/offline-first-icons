@@ -1,31 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="overflow-y-hidden">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Icons</title>
+<!-- main css file -->
     <link rel="stylesheet" href="./styles/style.css">
+    <!-- sidebar css file -->
+    <link rel="stylesheet" href="./styles/sidebar.css">
+    <!-- navbar css -->
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./font-awsome-icons/css/all.min.css">
-</head>
+    <!-- icons css -->
+    <link rel="stylesheet" href="./font-awsome-icons/css/all.min.css"></head>
 
 <body>
+ <div class="container-fluid">
+        <nav class="navbar navbar-expand-sm bg-light">
+
+            <div class="container-fluid">
+                <!-- Links -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <!-- Button to open the offcanvas sidebar -->
+                        <button class="btn btn-primary offcanvasBtn" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#demo">
+                            ≡ Menu
+                        </button>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Link 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link 3</a>
+                    </li> -->
+                </ul>
+            </div>
+
+        </nav>
+<!-- Button to open the offcanvas sidebar -->
+    <button class="btn btn-primary offcanvasBtn" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+        ≡ Menu
+    </button>
     <div class="d-flex">
 
-        <!-- LEFT SIDEBAR -->
-        <!-- SIDEBAR -->
-        <div class="sidebar bg-light">
-
-            <!-- TOGGLER (small screens only) -->
-            <button class="navbar-toggler navbar-light d-lg-none m-2" type="button" data-bs-toggle="collapse"
-                data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- COLLAPSIBLE MENU -->
-            <div class="collapse d-lg-block" id="sidebarMenu">
+        <!-- Offcanvas Sidebar -->
+        <div class="offcanvas offcanvas-start" id="demo">
+            <div class="offcanvas-body sidebar bg-light">
 
                 <h6 class="px-3 pt-3 text-muted">Icon Categories</h6>
 
@@ -108,8 +131,7 @@
 
             </div>
         </div>
-        <!-- right content -->
-        <!-- main content -->
+         <!-- main content -->
         <div class="flex-grow-1 p-4">
             <section class="container py-4">
                 <h1>Weather Icons</h1>
@@ -212,7 +234,8 @@
             </section>
         </div>
     </div>
-    <script src="./js/logic.js"></script>
+    </div>
+<script src="./js/logic.js"></script>
     <script src="./js/icon-preview.js"></script>
     <script src="./js/search-filter.js"></script>
     <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>

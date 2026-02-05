@@ -1,0 +1,87 @@
+/* On large screens, remove dark backdrop and keep sidebar always visible */
+@media screen and (min-width: 770px) {
+    .offcanvas {
+        position: relative !important;
+        /* normal sidebar */
+        top: 0;
+        transform: none !important;
+        /* cancel offcanvas transform */
+        visibility: visible !important;
+        flex-shrink: 0;
+        width: 250px !important;
+        box-shadow: none;
+        /* overflow-y: auto;
+        overflow-x: hidden !important; */
+    }
+
+    .offcanvas-body {
+        width: 250px !important;
+    }
+
+    .offcanvasBtn {
+        display: none !important;
+    }
+
+    /* hide backdrop */
+    .offcanvas-backdrop {
+        display: none !important;
+    }
+
+    /* hide toggle button */
+    .d-lg-none {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .offcanvas {
+        position: relative;
+        /* normal sidebar */
+        top: 0;
+        /* transform: none !important; */
+        /* cancel offcanvas transform */
+        /* visibility: visible !important; */
+        flex-shrink: 0;
+        width: 250px !important;
+        box-shadow: none;
+    }
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: relative;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    /* overflow-x: hidden; */
+    overflow-y: auto !important;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+@media screen and (min-width: 770px) {
+    .offcanvas-start {
+        width: 250px !important;
+        display: block !important;
+        z-index: 2 !important;
+    }
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.sidebar a:hover {
+    background-color: #f1f1f1;
+}
+
+.sidebar a.active {
+    background-color: #0a58ca;
+    color: white;
+    font-weight: 600;
+}
